@@ -9,7 +9,7 @@ class BBCodeParser
     public static function parse(string $content)
     {
         if(config('bbcode-parser.break-newlines')) {
-            $content = Str::replaceMatches('/[\n]/', fn ($matches) => '<br>', $content);
+            $content = Str::replaceMatches('/ul.*?\/ul(*SKIP)(*F)|[\n]/s', fn ($matches) => '<br>', $content);
         }
         self::getParsers()->each(function ($parser) use (&$content) {
             $content = Str::replaceMatches($parser::pattern(), fn ($matches) => $parser::match($matches), $content);
