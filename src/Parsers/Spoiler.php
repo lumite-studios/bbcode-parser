@@ -1,6 +1,7 @@
 <?php
 namespace LumiteStudios\BBCodeParser\Parsers;
 
+use LumiteStudios\BBCodeParser\BBCodeParser;
 use LumiteStudios\BBCodeParser\Contracts\Parser;
 
 class Spoiler implements Parser
@@ -12,6 +13,7 @@ class Spoiler implements Parser
 
     public static function match($matches): string
     {
-        return '<details><summary>Spoiler</summary>'.$matches[1].'</details>';
+        $parsed = BBCodeParser::parse($matches[1]);
+        return "<details><summary>Spoiler</summary>{$parsed}</details>";
     }
 }

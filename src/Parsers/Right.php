@@ -1,6 +1,7 @@
 <?php
 namespace LumiteStudios\BBCodeParser\Parsers;
 
+use LumiteStudios\BBCodeParser\BBCodeParser;
 use LumiteStudios\BBCodeParser\Contracts\Parser;
 
 class Right implements Parser
@@ -12,6 +13,7 @@ class Right implements Parser
 
     public static function match($matches): string
     {
-        return '<div style="text-align:right;">'.$matches[1].'</div>';
+        $parsed = BBCodeParser::parse($matches[1]);
+        return "<div style=\"text-align:right;\">{$parsed}</div>";
     }
 }
