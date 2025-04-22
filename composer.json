@@ -1,16 +1,28 @@
 {
     "name": "lumite-studios/bbcode-parser",
     "description": "A parser for BBCode.",
-    "autoload": {
-        "psr-4": {
-            "LumiteStudios\\BbcodeParser\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "crotanite",
             "email": "crotanite@lumitestudios.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LumiteStudios\\BBCodeParser\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LumiteStudios\\BBCodeParser\\BBCodeParserProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
