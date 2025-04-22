@@ -1,0 +1,16 @@
+{
+    "name": "lumite-studios/bbcode-parser",
+    "description": "A parser for BBCode.",
+    "autoload": {
+        "psr-4": {
+            "LumiteStudios\\BbcodeParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "crotanite",
+            "email": "crotanite@lumitestudios.com"
+        }
+    ],
+    "require": {}
+}
