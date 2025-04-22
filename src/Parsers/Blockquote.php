@@ -1,6 +1,7 @@
 <?php
 namespace LumiteStudios\BBCodeParser\Parsers;
 
+use LumiteStudios\BBCodeParser\BBCodeParser;
 use LumiteStudios\BBCodeParser\Contracts\Parser;
 
 class Blockquote implements Parser
@@ -12,6 +13,7 @@ class Blockquote implements Parser
 
     public static function match($matches): string
     {
-        return '<blockquote>'.$matches[1].'</blockquote>';
+        $parsed = BBCodeParser::parse($matches[1]);
+        return "<blockquote>{$parsed}</blockquote>";
     }
 }
