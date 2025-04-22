@@ -21,6 +21,7 @@ return [
         Parsers\Blockquote::class,
         Parsers\Spoiler::class,
         Parsers\SpoilerExtended::class,
+        Parsers\Image::class,
 
         Parsers\Left::class,
         Parsers\Center::class,
