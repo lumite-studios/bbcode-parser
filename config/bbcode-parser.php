@@ -12,6 +12,11 @@ return [
         Parsers\Underline::class,
         Parsers\Strikethrough::class,
 
+        Parsers\Left::class,
+        Parsers\Center::class,
+        Parsers\Right::class,
+        Parsers\Justify::class,
+
         Parsers\UnorderedList::class,
         Parsers\OrderedList::class,
         Parsers\ListItem::class,
@@ -22,10 +27,6 @@ return [
         Parsers\Spoiler::class,
         Parsers\SpoilerExtended::class,
         Parsers\Image::class,
-
-        Parsers\Left::class,
-        Parsers\Center::class,
-        Parsers\Right::class,
-        Parsers\Justify::class,
+        Parsers\Url::class,
     ],
 ];
