@@ -28,5 +28,6 @@ return [
         Parsers\SpoilerExtended::class,
         Parsers\Image::class,
         Parsers\Url::class,
+        Parsers\HorizontalLine::class,
     ],
 ];
