@@ -21,6 +21,7 @@ return [
         Parsers\OrderedList::class,
         Parsers\ListItem::class,
 
+        Parsers\Small::class,
         Parsers\Heading::class,
         Parsers\Code::class,
         Parsers\Blockquote::class,
